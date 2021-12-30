@@ -4,7 +4,7 @@
 
 // Sounds
 
-let lightning = new Audio("Sounds/LightningFx.wav");
+let lightning = new Audio("Sounds/LightningClip.mp3");
 // var growl = new Audio("sounds/growl1.mp3");
 
 // var grit = new Audio("sounds/grit_bass.mp3");
