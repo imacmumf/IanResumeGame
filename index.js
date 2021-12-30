@@ -1,9 +1,10 @@
 // alert("Hey");
 
-// confirm("You down?");
 
-// navbar sounds
 
+// Sounds
+
+let lightning = new Audio("Sounds/LightningFx.wav");
 // var growl = new Audio("sounds/growl1.mp3");
 
 // var grit = new Audio("sounds/grit_bass.mp3");
@@ -64,7 +65,8 @@ $(document).keydown(function(e){
       $(".char-pic").finish().animate({
           left: "-=50"
       });
-      $(".char-pic").attr("src","./Images/doom-left.png");
+      // $(".char-pic").attr("src","./Images/doom-left.png");
+      $(".char-pic").attr("src","./Images/Zenitsu-Gif-Left.gif");
     }
       break;
     
@@ -78,7 +80,8 @@ $(document).keydown(function(e){
       $(".char-pic").finish().animate({
           left: "+=50"
       });
-      $(".char-pic").attr("src","./Images/doom-right.png");
+      // $(".char-pic").attr("src","./Images/doom-right.png");
+      $(".char-pic").attr("src","./Images/Zenitsu-Gif-Right.gif");
     }
       break;
   case 40:    //bottom arrow key
@@ -86,7 +89,18 @@ $(document).keydown(function(e){
           top: "+=50"
       });
       break;
+  case 32:    //Space Bar
+      $(".char-pic").attr("src","./Images/thunder1.gif");
+      setTimeout(function() {
+        $(".char-pic").attr("src","./Images/Zenitsu-Gif-Mid.png");
+        lightning.play();
+      }, 550);
+      
+      
+
+      break;
   }
+  
 
   if ((bottom_of_screen > top_of_char) && (top_of_screen < bottom_of_char)){
     console.log("In bounds")
@@ -153,7 +167,7 @@ function buttonAnimation(currentKey) {
 
   setTimeout(function() {
     activeButton.classList.remove("pressed");
-  }, 100);
+  }, 200);
 
 }
 
