@@ -3,7 +3,7 @@
 body {
     text-align: center;
     /* background: linear-gradient(#4c1ac9, #9198e5); */
-    background-image: url(/Users/rneuendorff/Desktop/IanResumeGame/Images/8Bit-Landscape.jpeg);
+    background-image: url("../Images/8Bit-Landscape.jpeg");
     font-family: 'Exo 2', sans-serif;
     overflow: hidden;
     animation: fadeInAnimation ease 2s;
